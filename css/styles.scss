@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+// Variables
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan-color: hsl(178, 100%, 50%);
+
+$very-dark-blue-main: hsl(217, 54%, 11%);
+$very-dark-blue-card: hsl(216, 50%, 16%);
+$very-dark-blue-line: hsl(215, 32%, 27%);
+$white-general-color: hsl(0, 0%, 100%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// General Styles
+
+body{
+    font-family: 'Outfit', sans-serif;
+
+}
+
+main{
+    align-items: center;
+    background-color: $very-dark-blue-main;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.body-card{
+
+    background-color: $very-dark-blue-card;
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    color: $soft-blue;
+    padding: 1rem 1rem 1.5rem;
+    width: 90%;
+
+    .img-ethereum{
+        background-color: $cyan-color;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin: 0 0 1rem;
+        position: relative;
+        width: 100%;
+
+        &:hover .icon-view{
+            display: block;
+            z-index: 3;
+        }
+
+        &:hover .ethereum{
+            mix-blend-mode: multiply;
+            opacity: 0.5;
+        }
+
+        .icon-view{
+            display: none;
+            left: calc(50% - 24px);
+            position: absolute;
+            top: calc(50% - 24px);
+        }
+
+        .ethereum{
+            border-radius: 0.5rem;
+            display: block;
+            width: 100%;
+            z-index: 3;
+        }
+
+    }
+
+    h1{
+       color: $white-general-color;
+       font-weight: 600;
+       font-size: 1rem;
+       cursor: pointer;
+
+       &:hover{
+           color: $cyan-color;
+       }
+    }
+
+    p{
+        font-size: 1.125rem;
+        font-weight: 300;
+        margin: 1rem 0;
+    }
+
+}
+
+.info-ethereum{
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        align-items: center;
+        display: flex; 
+        font-weight: 400;
+
+        img{
+            margin-right: 0.5rem;
+        }
+
+        .text-cyan{
+            color: $cyan-color;
+        }
+
+    }
+
+}
+
+hr{
+    color: $very-dark-blue-line;
+    border: solid 1px;
+    margin: 1rem 0;
+}
+
+.footer-card{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    img{
+        width: 2rem;
+        border: solid $white-general-color;
+        border-radius: 50%;
+        border-width: 0.063rem;
+        margin-right: 0.9rem;
+    }
+
+    span{
+
+        span{
+            color: $white-general-color;
+            cursor: pointer;
+            font-weight: 400;
+
+            &:hover{
+                color: $cyan-color;
+            }
+        }
+    }
+}
+
+@media (min-width: 376px) {
+    .body-card{
+        width: 21.094rem;
+        padding: 1.5rem 1.5rem 1.7rem;
+    }
+
+} 
+
+    
+
+
